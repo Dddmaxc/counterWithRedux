@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dddmaxc/counterWithRedux.git/static/css/main.344aacb7.css",
+    "main.js": "/Dddmaxc/counterWithRedux.git/static/js/main.602f12dc.js",
+    "static/js/453.68693753.chunk.js": "/Dddmaxc/counterWithRedux.git/static/js/453.68693753.chunk.js",
+    "index.html": "/Dddmaxc/counterWithRedux.git/index.html",
+    "main.344aacb7.css.map": "/Dddmaxc/counterWithRedux.git/static/css/main.344aacb7.css.map",
+    "main.602f12dc.js.map": "/Dddmaxc/counterWithRedux.git/static/js/main.602f12dc.js.map",
+    "453.68693753.chunk.js.map": "/Dddmaxc/counterWithRedux.git/static/js/453.68693753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.344aacb7.css",
+    "static/js/main.602f12dc.js"
+  ]
+}
