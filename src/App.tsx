@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { MainTable } from './components/MainTable'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+	CounterState,
+	cleanerAC,
+	decrementAC,
+	incrementAC,
+} from './state/CounterReducer'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const count = useSelector<CounterState, number>(state => state.count)
+	const dispatch = useDispatch()
+	console.log(count)
+	const increment = () => {
+		dispatch(incrementAC(count + 1))
+	}
+	const decrement = () => {
+		dispatch(decrementAC(count))
+	}
+	const clean = () => {
+		dispatch(cleanerAC(count))
+	}
+
+	return (
+		<div className='App'>
+			<main>
+				<div></div>
+				<h1>Counter with Redux</h1>
+			</main>
+			<MainTable
+				count={count}
+				plus={increment}
+				minus={decrement}
+				clean={clean}
+			/>
+		</div>
+	)
 }
 
-export default App;
+export default App
